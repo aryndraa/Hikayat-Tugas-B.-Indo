@@ -46,7 +46,9 @@ body.active {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1; /* Letakkan di bawah elemen utama */ /* Sesuaikan dengan radius elemen utama */
+  z-index: -1;
+  /* Letakkan di bawah elemen utama */
+  /* Sesuaikan dengan radius elemen utama */
   box-shadow: 10px 10px 10px -5px var(--primary), -10px -10px 10px -5px #ff00f5;
   /* Dua lapisan gradient, warna merah dan biru, dengan sudut 45 derajat */
 }
@@ -76,7 +78,8 @@ body.active {
 }
 
 .pageNav {
-  transition: 0.4s; /* Animasi perubahan posisi */
+  transition: 0.4s;
+  /* Animasi perubahan posisi */
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -226,10 +229,12 @@ img.svg-icon {
     box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
       0 0 20px var(--primary);
   }
+
   50% {
     box-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary),
       0 0 40px var(--primary);
   }
+
   100% {
     box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
       0 0 20px var(--primary);
@@ -243,7 +248,8 @@ img.svg-icon {
   text-align: center;
   font-size: 2.5rem;
   padding-bottom: 10px;
-  display: inline-block; /* Membuat elemen menjadi inline block */
+  display: inline-block;
+  /* Membuat elemen menjadi inline block */
   border-bottom: 2px solid var(--primary);
   width: 50%;
 }
@@ -266,6 +272,7 @@ img.svg-icon {
   from {
     width: 0;
   }
+
   to {
     width: 100%;
   }
@@ -428,14 +435,16 @@ img.svg-icon {
 }
 
 .nilai .story h1::after {
-  content: ""; /* Menambahkan konten kosong untuk pseudo-element */
+  content: "";
+  /* Menambahkan konten kosong untuk pseudo-element */
   display: block;
   width: 50%;
   height: 2px;
   background-color: var(--primary);
   position: absolute;
   bottom: 0;
-  left: 25%; /* Menyesuaikan letak border di tengah elemen h1 */
+  left: 25%;
+  /* Menyesuaikan letak border di tengah elemen h1 */
 }
 
 .active {
@@ -490,7 +499,8 @@ img.svg-icon {
 }
 
 .nilai .story .tes {
-  max-height: 400px; /* Sesuaikan dengan tinggi maksimum yang diinginkan */
+  max-height: 400px;
+  /* Sesuaikan dengan tinggi maksimum yang diinginkan */
   overflow-y: auto;
   border: solid 2px var(--primary);
 }
@@ -600,9 +610,11 @@ img.svg-icon {
   margin-top: 10px;
   padding-top: 10px;
   border-top: solid 2px var(--primary);
-  max-height: 1000px; /* Sesuaikan dengan ketinggian maksimal yang mungkin */
+  max-height: 1000px;
+  /* Sesuaikan dengan ketinggian maksimal yang mungkin */
   opacity: 1;
-  padding-left: 10px; /* Sesuaikan dengan kebutuhan margin atas */
+  padding-left: 10px;
+  /* Sesuaikan dengan kebutuhan margin atas */
 }
 
 /* SESI PROFIL */
@@ -716,21 +728,25 @@ img.svg-icon {
   background-size: cover;
   background-position: center;
 }
+
 .card-wrapper .card-2 .img {
   background-image: url(assets/img/dev.jpeg);
   background-size: cover;
   background-position: center;
 }
+
 .card-wrapper .card-3 .img {
   background-image: url(assets/img/arya.jpeg);
   background-size: cover;
   background-position: center;
 }
+
 .card-wrapper .card-4 .img {
   background-image: url(assets/img/ayod.jpg);
   background-size: cover;
   background-position: center;
 }
+
 .card-wrapper .card-5 .img {
   background-image: url(assets/img/mulya.jpeg);
   background-size: cover;
@@ -758,9 +774,11 @@ img.svg-icon {
   0% {
     transform: translateY(-10px);
   }
+
   50% {
     transform: translateY(10px);
   }
+
   100% {
     transform: translateY(-10px);
   }
@@ -887,10 +905,12 @@ footer {
       box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
         0 0 10px var(--primary);
     }
+
     50% {
       box-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary),
         0 0 20px var(--primary);
     }
+
     100% {
       box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
         0 0 10px var(--primary);
@@ -941,6 +961,7 @@ footer {
     padding-left: 0px;
     list-style: none;
   }
+
   .hikayat .cont .kolom li {
     font-size: 15px;
     padding-left: 1px;
@@ -1044,6 +1065,7 @@ footer {
     font-size: 13px;
     font-weight: 300;
   }
+
   .struk.active {
     font-size: 13px;
     font-weight: 300;
@@ -1088,7 +1110,7 @@ footer {
   .sumber .listsumber {
     margin-top: 40px;
     padding: 20px;
-    margin-bottom: 40vh;
+    margin-bottom: 20vh;
   }
 
   .sumber .listsumber li {
@@ -1099,6 +1121,7 @@ footer {
     font-size: 10px;
     line-height: normal;
   }
+
   footer {
     font-size: 10px;
   }
