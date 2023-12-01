@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hikayat</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- iconWEB -->
+    <link
+      rel="icon"
+      href="assets/icon/WhatsApp Image 2023-12-01 at 16.16.34.jpeg"
+      type="image/x-icon"
+    />
+    <!-- Untuk beberapa browser -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icon/WhatsApp Image 2023-12-01 at 16.16.34.jpeg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icon/WhatsApp Image 2023-12-01 at 16.16.34.jpeg"
+    />
+
+    <!-- Untuk Apple Touch Icon (114x114px) -->
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/icon/WhatsApp Image 2023-12-01 at 16.16.34.jpeg"
+    />
+
+    <!-- android -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100;200;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page 1 -->
+    <header class="page1" id="page1">
+      <div class="hero">
+        <h2>Hikayat</h2>
+        <h1>Kisah Ramayana</h1>
+        <h4>Projek Bahasa Indonesia</h4>
+        <h3>-XSE3 Developer-</h3>
+      </div>
+    </header>
+
+    <!-- Page Nav -->
+
+    <div class="pageNav" id="pageNav">
+      <div class="navi">
+        <div class="dropdown">
+          <button class="menu" id="navTitle" onclick="sidebar()">MENU</button>
+          <div class="dropdown-content" id="side">
+            <a href="#home">Home</a>
+            <a href="#hikayat">Hikayat</a>
+            <a href="#nilai">Nilai Pada Hikayat</a>
+            <a href="#sesi__profil">Kelompok</a>
+            <a href="#sumber">Daftar Sumber</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- home -->
+    <section id="home" class="home" data-section-name="Home">
+      <h1><span>Home</span> Section</h1>
+      <div class="page" id="page">
+        <div class="topik" id="topik">
+          <h2>Topik</h2>
+          <div id="typing-container">
+            <div id="current-word" class="typing"></div>
+          </div>
+          <p>
+            Dan Mengindenfikasi Nilai-Nilai Dalam Suatu <span>Hikayat</span>
+          </p>
+        </div>
+        <div class="tujuan" id="tujuan">
+          <h2>Tujuan</h2>
+          <p>
+            > Agar Siswa Dapat <span>Mengidenfikasi</span> nilai dan isi
+            <span>hikayat</span>
+          </p>
+          <p>> Mengetahui Pentingnya <span>Kolaborasi</span> Dalam Kelompok</p>
+          <p>> Mengembangkan <span>Inovasi</span> & <span>Kreativitas</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="hikayat" id="hikayat" data-section-name="Hikayat">
+      <h1><span>Hikayat</span> Section</h1>
+      <div class="d-flex align-items-start cont">
+        <div
+          class="side"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <button
+            class="nav-link active"
+            id="v-pills-home-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-home"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            Pengertian
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-profile-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-profile"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-profile"
+            aria-selected="false"
+          >
+            Ciri-Ciri
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-disabled-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-disabled"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-disabled"
+            aria-selected="false"
+          >
+            Karakteristik
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-messages-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-messages"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-messages"
+            aria-selected="false"
+          >
+            Nilai-Nilai
+          </button>
+          <button
+            class="nav-link"
+            id="v-pills-settings-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#v-pills-settings"
+            type="button"
+            role="tab"
+            aria-controls="v-pills-settings"
+            aria-selected="false"
+          >
+            Sruktur
+          </button>
+        </div>
+        <div class="tab-content kolom" id="v-pills-tabContent">
+          <div
+            class="tab-pane fade show active"
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+            tabindex="0"
+          >
+            <p>
+              Secara harfiah hikayat memiliki arti yang sama dengan
+              kenang-kenangan. Yang memiliki maksud sebuah karya yang menjadi
+              kenangan atau sebagai riwayat dari buah pemikiran sang pujangga
+              kepada orang lain.
+            </p>
+            <p>
+              Sedangkan dalam bahasa Arab, hikayat berasal dari hikayah yang
+              memiliki arti kisah, dongeng atau cerita. Hikayat ini adalah
+              dongeng yang umumnya diceritakan dalam bahasa Melayu. Tema yang
+              diangkat ke dalam karya sastra hikayat ini pada umumnya
+              mengisahkan tentang kepahlawanan atau kehebatan seseorang dengan
+              keajaiban dan mukjizatnya.
+            </p>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-profile"
+            role="tabpanel"
+            aria-labelledby="v-pills-profile-tab"
+            tabindex="0"
+          >
+            <ul class="tih">
+              <li>Menggunakan Bahasa Melayu Klasik</li>
+              <li>Tema Kerajaan</li>
+              <li>
+                Statis (tidak memiliki banyak perubahan yang berbeda dengan
+                hikayat lain)
+              </li>
+              <li>Tradisional</li>
+              <li>Bersifat Edukasi</li>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-disabled"
+            role="tabpanel"
+            aria-labelledby="v-pills-disabled-tab"
+            tabindex="0"
+          >
+            <ul>
+              <li>Anonim</li>
+              <p>
+                Tidak diketahui secara jelas nama pencerita atau pengarangnya.
+                Hal tersebut disebabkan cerita disampaikan secara lisan. Bahkan,
+                dahulu masyarakat mempercayai bahwa cerita yang disampaikan
+                adalah nyata dan tidak ada yang sengaja mengarang.
+              </p>
+              <li>Kemustahilan</li>
+              <p>
+                Artinya, cerita yang disampaikan dalam bentuk hikayat tidak
+                logis atau tidak bisa dinalar.
+              </p>
+              <li>Kesaktian</li>
+              <p>
+                Selain kemustahilan, seringkali dapat kita temukan kesaktian
+                para tokoh dalam sebuah hikayat. Karakteristik jenis ini mudah
+                ditemukan dalam hikayat yang mengisahkan raja-raja.
+              </p>
+              <li>Istana Sentris</li>
+              <p>
+                Hikayat seringkali bertema dan berlatar kerajaan. Selain itu,
+                latar tempat dalam cerita tersebut adalah negeri yang dipimpin
+                oleh raja dalam suatu kerajaan.
+              </p>
+              <li>Arkais</li>
+              <p>Hikayat menggunakan bahasa yang sudah lampau</p>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-messages"
+            role="tabpanel"
+            aria-labelledby="v-pills-messages-tab"
+            tabindex="0"
+          >
+            <ul>
+              <li>Nilai Budaya</li>
+              <p>
+                Nilai budaya merupakan nilai yang diambil dari budaya yang
+                berkembang secara turun temurun di masyarakat setempat.
+              </p>
+              <li>Nilai Moral</li>
+              <p>
+                Nilai moral adalah nilai yang berhubungan dengan masalah moral.
+                Pada dasarnya nilai moral berkaitan dengan nasihat-nasihat
+                tentang budi pekerti, perilaku, atau tata susila yang dapat
+                diperoleh pembaca dari cerita yang dibacanya.
+              </p>
+              <li>Nilai Agama Atau Religi</li>
+              <p>Nilai agama berhubungan dengan masalah keagamaan.</p>
+              <li>Nilai Pendidikan Atau Edukasi</li>
+              <p>
+                Nilai pendidikan ini berhubungan dengan proses perubahan sikap
+                dan tata laku seseorang atau kelompok orang untuk mendewasakan
+                manusia melalui pengajaran dan latihan.
+              </p>
+              <li>Nilai Estetika</li>
+              <p>
+                Seperti namanya, nilai estetika dalam hikayat berhubungan dengan
+                keindahan.
+              </p>
+              <li>Sosial</li>
+              <p>
+                Nilai sosial merupakan nilai yang berhubungan dengan kehidupan
+                di dalam masyarakat yang berupa nasihat-nasihat.
+              </p>
+            </ul>
+          </div>
+          <div
+            class="tab-pane fade"
+            id="v-pills-settings"
+            role="tabpanel"
+            aria-labelledby="v-pills-settings-tab"
+            tabindex="0"
+          >
+            <ul>
+              <li>Abstraksi</li>
+              <p>
+                Abstraksi yang ada di dalam teks hikayat berisi mengenai sebuah
+                inti cerita yang nantinya akan dikembangkan menjadi berbagai
+                macam peristiwa. Pada umumnya, abstraksi sering disebut sebagai
+                gambaran yang ada di dalam cerita.
+              </p>
+              <li>Orientasi</li>
+              <p>
+                Orientasi adalah salah satu struktur bagian yang ada di dalam
+                teks hikayat yang berisikan mengenai keterangan waktu, suasana,
+                dan tempat yang ada di dalam cerita tersebut.
+              </p>
+              <li>Komplikasi</li>
+              <p>
+                Pada struktur teks hikayat ini, komplikasi berisikan mengenai
+                urutan dalam berbagai peristiwa yang dihubungkan sesuai dengan
+                sebab dan akibat.
+              </p>
+              <li>Evaluasi</li>
+              <p>
+                Di dalam bagian evaluasi, berbagai macam konflik mulai
+                memperoleh berbagai resolusi dan juga penyelesaian yang
+                dilakukan oleh peran tokoh yang sangat sentral. Evaluasi dapat
+                membuat teks seakan mendekati akhir cerita ataupun akhir dari
+                teks tersebut.
+              </p>
+              <li>Resolusi</li>
+              <p>
+                Perlu dipahami bahwa resolusi menjadi bagian dari teks hikayat
+                yang berisi mengenai berbagai macam solusi dari suatu masalah
+                yang dialami oleh tokoh atau karakter yang ada di dalam cerita.
+              </p>
+              <li>Koda</li>
+              <p>
+                Koda adalah bagian akhir dari penulisan teks hikayat. Pada
+                bagian ini, kita bisa sebut dengan kesimpulan.
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="nilai" id="nilai" data-section-name="Nilai">
+      <div class="title">
+        <h1>Mendefinisikan Nilai-Nilai</h1>
+        <h1>Dalam Sebuah <span>Hikayat</span></h1>
+      </div>
+      <div class="story" id="story">
+        <h1>Ramayana</h1>
+        <button id="moon" onclick="drk()" type="button" class="drk active">
+          <img src="assets/bx-moon.svg" alt="" />
+        </button>
+        <button id="sun" onclick="light()" type="button" class="sun">
+          <img src="assets/bx-sun.svg" alt="" />
+        </button>
+        <div class="tes">
+          <div class="paragraf">
+            <p>
+              Dikisahkan di sebuah negeri bernama Mantili ada seorang puteri nan
+              cantik jelita bernama Dewi Shinta. Dia seorang puteri raja negeri
+              Mantili yaitu Prabu Janaka. Suatu hari sang Prabu mengadakan
+              sayembara untuk mendapatkan sang Pangeran bagi puteri tercintanya
+              yaitu Shinta, dan akhirnya sayembara itu dimenangkan oleh Putera
+              Mahkota Kerajaan Ayodya, yang bernama Raden Rama Wijaya. Namun
+              dalam kisah ini ada juga seorang raja Alengkadiraja yaitu Prabu
+              Rahwana, yang juga sedang kasmaran, namun bukan kepada Dewi Shinta
+              tetapi dia ingin memperistri Dewi Widowati. Dari penglihatan
+              Rahwana, Shinta dianggap sebagai titisan Dewi Widowati yang selama
+              ini diimpikannya. Dalam sebuah perjalanan Rama dan Shinta dan
+              disertai Lesmana adiknya, sedang melewati hutan belantara yang
+              dinamakan hutan Dandaka, si raksasa Prabu Rahwana mengintai mereka
+              bertiga, khususnya Shinta. Rahwana ingin menculik Shinta untuk
+              dibawa ke istananya dan dijadikan istri, dengan siasatnya Rahwana
+              mengubah seorang hambanya bernama Marica menjadi seekor kijang
+              kencana. Dengan tujuan memancing Rama pergi memburu kijang
+              jadi-jadian itu, karena Dewi Shinta menginginkannya. Dan memang
+              benar setelah melihat keelokan kijang tersebut, Shinta meminta
+              Rama untuk menangkapnya. Karena permintaan sang istri tercinta
+              maka Rama berusaha mengejar kijang seorang diri sedang Shinta dan
+              Lesmana menunggui.
+            </p>
+            <p>
+              Dalam waktu sudah cukup lama ditinggal berburu, Shinta mulai
+              mencemaskan Rama, maka meminta Lesmana untuk mencarinya. Sebelum
+              meninggalkan Shinta seorang diri Lesmana tidak lupa membuat
+              perlindungan guna menjaga keselamatan Shinta yaitu dengan membuat
+              lingkaran magis. Dengan lingkaran ini Shinta tidak boleh
+              mengeluarkan sedikitpun anggota badannya agar tetap terjamin
+              keselamatannya, jadi Shinta hanya boleh bergerak-gerak sebatas
+              lingkaran tersebut. Setelah kepergian Lesmana, Rahwana mulai
+              beraksi untuk menculik, namun usahanya gagal karena ada lingkaran
+              magis tersebut. Rahwana mulai cari siasat lagi, caranya ia
+              menyamar yaitu dengan mengubah diri menjadi seorang brahmana tua
+              dan bertujuan mengambil hati Shinta untuk memberi sedekah.
+              Ternyata siasatnya berhasil membuat Shinta mengulurkan tangannya
+              untuk memberi sedekah, secara tidak sadar Shinta telah melanggar
+              ketentuan lingkaran magis yaitu tidak diijinkan mengeluarkan
+              anggota tubuh sedikitpun! Saat itu juga Rahwana tanpa ingin
+              kehilangan kesempatan ia menangkap tangan dan menarik Shinta
+              keluar dari lingkaran. Selanjutnya oleh Rahwana, Shinta dibawa
+              pulang ke istananya di Alengka. Saat dalam perjalanan pulang itu
+              terjadi pertempuran dengan seekor burung Garuda yang bernama
+              Jatayu yang hendak menolong Dewi Shinta. Jatayu dapat mengenali
+              Shinta sebagai puteri dari Janaka yang merupakan teman baiknya,
+              namun dalam pertempuan itu Jatayu dapat dikalahkan Rahwana.
+            </p>
+            <p>
+              Disaat yang sama Rama terus memburu kijang kencana dan akhirnya
+              Rama berhasil memanahnya, namun kijang itu berubah kembali menjadi
+              raksasa. Dalam wujud sebenarnya Marica mengadakan perlawanan pada
+              Rama sehingga terjadilah pertempuran antar keduanya, dan pada
+              akhirnya Rama berhasil memanah si raksasa. Pada saat yang
+              bersamaan Lesmana berhasil menemukan Rama dan mereka berdua
+              kembali ke tempat semula dimana Shinta ditinggal sendirian, namun
+              sesampainya Shinta tidak ditemukan. Selanjutnya mereka berdua
+              berusaha mencarinya dan bertemu Jatayu yang luka parah, Rama
+              mencurigai Jatayu yang menculik dan dengan penuh emosi ia hendak
+              membunuhnya tapi berhasil dicegah oleh Lesmana. Dari keterangan
+              Jatayu mereka mengetahui bahwa yang menculik Shinta adalah
+              Rahwana! Setelah menceritakan semuanya akhirnya si burung garuda
+              ini meninggal.
+            </p>
+            <p>
+              Mereka berdua memutuskan untuk melakukan perjalanan ke istana
+              Rahwana dan ditengah jalan mereka bertemu dengan seekor kera putih
+              bernama Hanuman yang sedang mencari para satria guna mengalahkan
+              Subali. Subali adalah kakak dari Sugriwa paman dari Hanuman, Sang
+              kakak merebut kekasih adiknya yaitu Dewi Tara. Singkat cerita Rama
+              bersedia membantu mengalahkan Subali, dan akhirnya usaha itu
+              berhasil dengan kembalinya Dewi Tara menjadi istri Sugriwa. Pada
+              kesempatan itu pula Rama menceritakan perjalanannya akan
+              dilanjutkan bersama Lesmana untuk mencari Dewi Shinta sang istri
+              yang diculik Rahwana di istana Alengka. Karena merasa berutang
+              budi pada Rama maka Sugriwa menawarkan bantuannya dalam menemukan
+              kembali Shinta, yaitu dimulai dengan mengutus Hanuman persi ke
+              istana Alengka mencari tahu Rahwana menyembunyikan Shinta dan
+              mengetahui kekuatan pasukan Rahwana.
+            </p>
+            <p>
+              Taman Argasoka adalah taman kerajaan Alengka tempat dimana Shinta
+              menghabiskan hari-hari penantiannya dijemput kembali oleh sang
+              suami. Dalam Argasoka Shinta ditemani oleh Trijata kemenakan
+              Rahwana, selain itu juga berusaha membujuk Shinta untuk bersedia
+              menjadi istri Rahwana. Karena sudah beberapa kali Rahwana meminta
+              dan ‘memaksa’ Shinta menjadi istrinya tetapi ditolak,
+              sampai-sampai Rahwana habis kesabarannya yaitu ingin membunuh
+              Shinta namun dapat dicegah oleh Trijata. Di dalam kesedihan Shinta
+              di taman Argasoka ia mendengar sebuah lantunan lagu oleh seekor
+              kera putih yaitu Hanuman yang sedang mengintainya. Setelah
+              kehadirannya diketahui Shinta, segera Hanuman menghadap untuk
+              menyampaikan maksud kehadirannya sebagai utusan Rama. Setelah
+              selesai menyampaikan maskudnya Hanuman segera ingin mengetahui
+              kekuatan kerajaan Alengka. Caranya dengan membuat keonaran yaitu
+              merusak keindahan taman, dan akhirnya Hanuman tertangkap oleh
+              Indrajid putera Rahwana dan kemudian dibawa ke Rahwana. Karena
+              marahnya Hanuman akan dibunuh tetapi dicegah oleh Kumbakarna
+              adiknya, karena dianggap menentang, maka Kumbakarna diusir dari
+              kerjaan Alengka. Tapi akhirnya Hanuman tetap dijatuhi hukuman
+              yaitu dengan dibakar hidup-hidup, tetapi bukannya mati tetapi
+              Hanuman membakar kerajaan Alengka dan berhasil meloloskan diri.
+              Sekembalinya dari Alengka, Hanuman menceritakan semua kejadian dan
+              kondisi Alengka kepada Rama. Setelah adanya laporan itu, maka Rama
+              memutuskan untuk berangkat menyerang kerajaan Alengka dan diikuti
+              pula pasukan kera pimpinan Hanuman.
+            </p>
+            <p>
+              Setibanya di istana Rahwana terjadi peperangan, dimana awalnya
+              pihak Alengka dipimpin oleh Indrajid. Dalam pertempuran ini
+              Indrajid dapat dikalahkan dengan gugurnya Indrajit. Alengka
+              terdesak oleh bala tentara Rama, maka Kumbakarna raksasa yang
+              bijaksana diminta oleh Rahwana menjadi senopati perang. Kumbakarna
+              menyanggupi tetapi bukannya untuk membela kakaknya yang angkara
+              murka, namun demi untuk membela bangsa dan negara
+              Alengkadiraja.Dalam pertempuran ini pula Kumbakarna dapat
+              dikalahkan dan gugur sebagai pahlawan bangsanya. Dengan gugurnya
+              sang adik, akhirnya Rahwana menghadapi sendiri Rama. Pad akhir
+              pertempuran ini Rahwana juga dapat dikalahkan seluruh pasukan
+              pimpinan Rama. Rahmana mati kena panah pusaka Rama dan dihimpit
+              gunung Sumawana yang dibawa Hanuman.
+            </p>
+            <p>
+              Setelah semua pertempuran yang dasyat itu dengan kekalahan dipihak
+              Alengka maka Rama dengan bebas dapat memasuki istana dan mencari
+              sang istri tercinta. Dengan diantar oleh Hanuman menuju ke taman
+              Argasoka menemui Shinta, akan tetapi Rama menolak karena
+              menganggap Shinta telah ternoda selama Shinta berada di kerajaan
+              Alengka. Maka Rama meminta bukti kesuciannya, yaitu dengan
+              melakukan bakar diri. Karena kebenaran kesucian Shinta dan
+              pertolongan Dewa Api, Shinta selamat dari api. Dengan demikian
+              terbuktilah bahwa Shinta masih suci dan akhirnya Rama menerima
+              kembali Shinta dengan perasaan haru dan bahagia. Dan akhir dari
+              kisah ini mereka kembali ke istananya masing-masing
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="definisi">
+        <div class="a">
+          <h2><span>Nilai</span> Yang Terkandung</h2>
+          <h3>Pada Hikayat ini Mengandung Beberapa nilai <span>Moral</span></h3>
+          <div class="isi">
+            <ul>
+              <li>Keberanian dan Pengorbanan:</li>
+              <p>
+                Keberanian Rama dalam melawan kekuatan jahat untuk menyelamatkan
+                Shinta menunjukkan nilai keberanian dan pengorbanan.
+              </p>
+              <li>Setia pada Tugas dan Tanggung Jawab:</li>
+              <p>
+                Rama setia pada tugas dan tanggung jawabnya sebagai seorang
+                suami dan pangeran, yang mencerminkan nilai-nilai kesetiaan pada
+                peran dan tanggung jawab kita.
+              </p>
+              <li>Kesetiaan dalam Cinta:</li>
+              <p>
+                Kesetiaan Rama pada Shinta meskipun dihadapkan pada cobaan dan
+                ujian menunjukkan nilai-nilai kesetiaan dalam hubungan cinta dan
+                perkawinan.
+              </p>
+              <li>Kehormatan dan Kepahlawanan:</li>
+              <p>
+                Pertempuran dan pengorbanan para pahlawan seperti Indrajit dan
+                Kumbakarna menunjukkan nilai kehormatan dan kepahlawanan dalam
+                melindungi tanah air mereka.
+              </p>
+              <li>Kepercayaan pada Persahabatan dan Kerjasama:</li>
+              <p>
+                Kerjasama antara Rama, Hanuman, Sugriwa, dan pasukan kera
+                menunjukkan pentingnya kepercayaan pada persahabatan dan
+                kerjasama dalam mencapai tujuan bersama.
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="struktur">
+        <h2>Pembagian <span>Struktur</span> Pada Hikayat</h2>
+        <div class="konten">
+          <div class="row">
+            <div class="content">
+              <button onclick="abstrak()">Abstraksi</button>
+              <div class="struk" id="abstraksi">
+                <p>
+                  Dalam sebuah negeri bernama Mantili, terdapat seorang puteri
+                  cantik bernama Dewi Shinta. Dia adalah puteri raja Mantili,
+                  Prabu Janaka. Prabu Janaka mengadakan sayembara untuk
+                  menemukan pangeran yang cocok untuk Dewi Shinta. Sayembara
+                  tersebut dimenangkan oleh Putera Mahkota Kerajaan Ayodya,
+                  Raden Rama Wijaya. Namun, ada juga seorang raja bernama Prabu
+                  Rahwana yang ingin memperistri Dewi Widowati. Rahwana mengira
+                  Dewi Shinta adalah titisan Dewi Widowati yang selama ini
+                  diimpikannya. Rahwana berusaha menculik Dewi Shinta dengan
+                  mengubah seorang hamba menjadi seekor kijang. Dewi Shinta
+                  meminta Rama untuk menangkap kijang tersebut, dan Rama
+                  mengejarnya sendirian. Sementara itu, Rahwana mencoba menculik
+                  Dewi Shinta, tetapi usahanya gagal karena ada lingkaran magis
+                  yang melindungi Dewi Shinta. Rahwana kemudian menyamar menjadi
+                  seorang brahmana tua dan berhasil mengambil hati Dewi Shinta.
+                  Dalam keadaan tidak sadar, Dewi Shinta melanggar ketentuan
+                  lingkaran magis dan Rahwana berhasil menculiknya. Rama dan
+                  adiknya, Lesmana, mencari Dewi Shinta dan bertemu dengan
+                  burung Garuda bernama Jatayu yang hendak menolong Dewi Shinta.
+                  Namun, Jatayu dikalahkan oleh Rahwana. Sementara itu, Rama
+                  berhasil memanah kijang kencana yang sebenarnya adalah Marica
+                  yang berubah menjadi raksasa. Rama dan Lesmana kembali ke
+                  tempat Dewi Shinta, tetapi tidak menemukannya. Mereka bertemu
+                  dengan Jatayu yang luka parah dan mendapatkan informasi bahwa
+                  Rahwana yang menculik Dewi Shinta. Rama dan Lesmana memutuskan
+                  untuk mencari Dewi Shinta dan bertemu dengan kera putih
+                  bernama Hanuman yang sedang mencari satria untuk mengalahkan
+                  Subali. Rama membantu Hanuman mengalahkan Subali dan Hanuman
+                  membantu Rama dalam mencari Dewi Shinta. Mereka menemui Jatayu
+                  yang memberi tahu mereka bahwa Dewi Shinta berada di taman
+                  Argasoka di Alengka. Hanuman pergi ke Alengka untuk mencari
+                  tahu kekuatan pasukan Rahwana. Di taman Argasoka, Dewi Shinta
+                  dibujuk oleh Trijata untuk menjadi istri Rahwana. Hanuman
+                  datang dan menyampaikan pesan Rama kepada Dewi Shinta. Hanuman
+                  tertangkap oleh Indrajid, putera Rahwana, tetapi berhasil
+                  melarikan diri setelah membakar kerajaan Alengka. Hanuman
+                  menceritakan kondisi Alengka kepada Rama, dan Rama memutuskan
+                  untuk menyerang Alengka. Setelah pertempuran sengit, Rama
+                  berhasil mengalahkan Rahwana dan membebaskan Dewi Shinta.
+                  Namun, Rama menolak menerima Dewi Shinta karena meragukan
+                  kesuciannya. Dewi Shinta membuktikan kesuciannya dengan
+                  melakukan bakar diri dan selamat dari api. Rama menerima
+                  kembali Dewi Shinta, dan mereka kembali ke istana
+                  masing-masing.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content">
+              <button onclick="orientasi() ">Orientasi</button>
+              <div class="struk" id="orientasi">
+                <p>
+                  Dikisahkan di sebuah negeri bernama Mantili, ada seorang
+                  puteri cantik bernama Dewi Shinta. Dia adalah puteri raja
+                  Mantili, Prabu Janaka. Suatu hari, Prabu Janaka mengadakan
+                  sayembara untuk menemukan pangeran yang cocok untuk Dewi
+                  Shinta. Sayembara itu dimenangkan oleh Putera Mahkota Kerajaan
+                  Ayodya, Raden Rama Wijaya. Namun, ada juga seorang raja
+                  bernama Prabu Rahwana yang ingin memperistri Dewi Widowati.
+                  Rahwana mengira Dewi Shinta adalah titisan Dewi Widowati yang
+                  selama ini diimpikannya.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content">
+              <button onclick="komplikasi()">Komplikasi</button>
+              <div class="struk" id="komplikasi">
+                <p>
+                  Rahwana berusaha menculik Dewi Shinta dengan mengubah seorang
+                  hamba menjadi seekor kijang. Dewi Shinta meminta Rama untuk
+                  menangkap kijang tersebut, dan Rama mengejarnya sendirian.
+                  Sementara itu, Rahwana mencoba menculik Dewi Shinta, tetapi
+                  usahanya gagal karena ada lingkaran magis yang melindungi Dewi
+                  Shinta. Rahwana kemudian menyamar menjadi seorang brahmana tua
+                  dan berhasil mengambil hati Dewi Shinta. Dalam keadaan tidak
+                  sadar, Dewi Shinta melanggar ketentuan lingkaran magis dan
+                  Rahwana berhasil menculiknya.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content">
+              <button onclick="evaluasi()">Evaluasi</button>
+              <div class="struk" id="evaluasi">
+                <p>
+                  Rama dan adiknya, Lesmana, mencari Dewi Shinta dan bertemu
+                  dengan burung Garuda bernama Jatayu yang hendak menolong Dewi
+                  Shinta. Namun, Jatayu dikalahkan oleh Rahwana. Sementara itu,
+                  Rama berhasil memanah kijang kencana yang sebenarnya adalah
+                  Marica yang berubah menjadi raksasa. Rama dan Lesmana kembali
+                  ke tempat Dewi Shinta, tetapi tidak menemukannya. Mereka
+                  bertemu dengan Jatayu yang luka parah dan mendapatkan
+                  informasi bahwa Rahwana yang menculik Dewi Shinta.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content">
+              <button onclick="resolusi()">Resolusi</button>
+              <div class="struk" id="resolusi">
+                <p>
+                  Rama dan Lesmana memutuskan untuk mencari Dewi Shinta dan
+                  bertemu dengan kera putih bernama Hanuman yang sedang mencari
+                  satria untuk mengalahkan Subali. Rama membantu Hanuman
+                  mengalahkan Subali dan Hanuman membantu Rama dalam mencari
+                  Dewi Shinta. Mereka menemui Jatayu yang memberi tahu mereka
+                  bahwa Dewi Shinta berada di taman Argasoka di Alengka. Hanuman
+                  pergi ke Alengka untuk mencari tahu kekuatan pasukan Rahwana.
+                  Di taman Argasoka, Dewi Shinta dibujuk oleh Trijata untuk
+                  menjadi istri Rahwana. Hanuman datang dan menyampaikan pesan
+                  Rama kepada Dewi Shinta. Hanuman tertangkap oleh Indrajid,
+                  putera Rahwana, tetapi berhasil melarikan diri setelah
+                  membakar kerajaan Alengka. Hanuman menceritakan kondisi
+                  Alengka kepada Rama, dan Rama memutuskan untuk menyerang
+                  Alengka.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content">
+              <button onclick="koda()">Koda</button>
+              <div class="struk" id="koda">
+                <p>
+                  Setelah pertempuran sengit, Rama berhasil mengalahkan Rahwana
+                  dan membebaskan Dewi Shinta. Namun, Rama menolak menerima Dewi
+                  Shinta karena meragukan kesuciannya. Dewi Shinta membuktikan
+                  kesuciannya dengan melakukan bakar diri dan selamat dari api.
+                  Rama menerima kembali Dewi Shinta, dan mereka kembali ke
+                  istana masing-masing.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Profil Start -->
+    <section
+      id="sesi__profil"
+      class="sesi__profil"
+      data-section-name="Kelompok"
+    >
+      <h1 id="profil-title">Anggota <span>Kelompok</span></h1>
+      <div class="card-wrapper">
+        <div class="inner-scroller">
+          <div class="cards card-1">
+            <div class="img"></div>
+            <h2 class="cards-title">I Made Ghosana Wijaya <br /></h2>
+            <p class="person-information">X RPL 3 / 14</p>
+          </div>
+          <div class="cards card-2">
+            <div class="img"></div>
+            <h2 class="cards-title">I Putu Devano Sidhi Putra<br /></h2>
+            <p class="person-information">X RPL 3 / 16</p>
+          </div>
+          <div class="cards card-3">
+            <div class="img"></div>
+            <h2 class="cards-title">I Putu Mahendra Arya Valentino <br /></h2>
+            <p class="person-information">X RPL 3 / 18</p>
+          </div>
+          <div class="cards card-6">
+            <div class="img"></div>
+            <h2 class="cards-title">Ida Bagus Sanjay Brahmana Putra <br /></h2>
+            <p class="person-information">X RPL 3 / 20</p>
+          </div>
+          <div class="cards card-4">
+            <div class="img"></div>
+            <h2 class="cards-title">Kadek Ayodya Putra Deva <br /></h2>
+            <p class="person-information">X RPL 3 / 22</p>
+          </div>
+          <div class="cards card-5">
+            <div class="img"></div>
+            <h2 class="cards-title">Kadek Dwi Mulya Jaya<br /></h2>
+            <p class="person-information">X RPL 3 / 24</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Profil End -->
+
+    <!-- Daftar Sumber -->
+    <section class="sumber" id="sumber">
+      <h2>Daftar <span>Sumber</span></h2>
+      <div class="listsumber">
+        <li>Pengertian Hikayat</li>
+        <a href="PPT.pptx" download="PPT.pptx"
+          >MENELUSURI NILAI DALAM CERITA LINTAS ZAMAN.pptx</a
+        >
+        <li>Pengertian Sturktur Hikayat</li>
+        <a
+          href="https://www.detik.com/bali/berita/d-6593509/hikayat-adalah-pengertian-ciri-ciri-unsur-struktur-dan-contoh"
+          >https://www.detik.com/bali/berita/d-6593509/hikayat-adalah-pengertian-ciri-ciri-unsur-struktur-dan-contoh</a
+        >
+        <li>Hikayat</li>
+        <a href="https://ramaayana.wordpress.com/2013/07/01/kisah-ramayana/"
+          >https://ramaayana.wordpress.com/2013/07/01/kisah-ramayana/</a
+        >
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <p>&copy; 2023 SeruputCompany</p>
+    </footer>
+    <!-- boostrap js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js -->
+    <script src="script.js"></script>
+  </body>
+</html>

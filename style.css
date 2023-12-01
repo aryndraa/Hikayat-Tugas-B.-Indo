@@ -1,0 +1,1107 @@
+:root {
+  --fontPop: "Poppins", sans-serif;
+  --fontBeb: "Bebas Neue", sans-serif;
+  --primary: #00ffff;
+  --secondary: #ff00fb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdfdfd;
+  transition: background-color 0.3s;
+  min-height: 2000px;
+}
+
+body.active {
+  background-color: #16141e;
+}
+
+.page1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 1;
+  transition: position 0.2s ease-in-out;
+}
+
+.page1 .hero {
+  text-align: center;
+  border: 2px solid;
+  border-image: linear-gradient(46deg, var(--primary), #ff00f5);
+  border-image-slice: 1;
+  padding: 90px;
+  position: relative;
+}
+
+.page1 .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Letakkan di bawah elemen utama */ /* Sesuaikan dengan radius elemen utama */
+  box-shadow: 10px 10px 10px -5px var(--primary), -10px -10px 10px -5px #ff00f5;
+  /* Dua lapisan gradient, warna merah dan biru, dengan sudut 45 derajat */
+}
+
+.page1 .hero h2 {
+  font-size: 50px;
+  font-family: var(--fontPop);
+  padding-bottom: 10px;
+  border-bottom: solid;
+}
+
+.page1 .hero h1 {
+  font-size: 80px;
+  font-family: var(--fontBeb);
+  margin-bottom: 10px;
+}
+
+.page1 .hero h4 {
+  font-size: 20px;
+  font-family: var(--fontPop);
+}
+
+.page1 .hero h3 {
+  font-size: 30px;
+  margin-top: 10px;
+  font-family: var(--fontPop);
+}
+
+.pageNav {
+  transition: 0.4s; /* Animasi perubahan posisi */
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(-20deg, var(--primary), var(--secondary));
+  background-position: center;
+  align-items: center;
+  right: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.pageNav.active {
+  top: 0;
+  background: linear-gradient(-20deg, var(--primary), var(--secondary));
+  position: fixed;
+  border-radius: 50px;
+  margin-top: 10px;
+  box-shadow: -10px 10px 2cap 0px #000;
+  width: 10%;
+  z-index: 999999;
+}
+
+.navi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.menu {
+  background-color: transparent;
+  color: #f2f2f2;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  font-size: 25px;
+  color: #f9f9f9;
+  font-family: var(--fontBeb);
+  text-align: center;
+  display: flex;
+  --bs-btn-padding-y: 0;
+  --bs-btn-padding-x: 0px;
+  transition: 0.2s;
+}
+
+img.svg-icon {
+  filter: invert(1);
+}
+
+.dropdown-content {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 190px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 20px;
+  font-family: var(--fontPop);
+}
+
+/* .dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+} */
+
+.dropdown-content.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* home */
+.home {
+  padding-bottom: 5px;
+  color: #fff;
+  padding: 10vh 40px;
+  display: none;
+}
+
+.home.active {
+  display: block;
+}
+
+.home h1,
+.hikayat h1 {
+  font-family: var(--fontPop);
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 1.8rem;
+  color: #fff;
+}
+
+.home h1 span,
+.hikayat h1 span {
+  color: var(--primary);
+}
+
+.home .page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home .page .topik,
+.home .page .tujuan {
+  border: solid 2px var(--primary);
+  width: 40%;
+  text-align: center;
+  padding: 1rem;
+  border: var(--primary) solid 2px;
+  margin: 50px;
+  box-shadow: 2px 2px 4px var(--primary);
+  animation: glowing 5s ease-in-out infinite;
+  height: 380px;
+}
+
+#page {
+  transform: translateY(200px);
+  transition: transform 0.8s ease;
+}
+
+#page.active {
+  transform: translateY(0px);
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
+      0 0 20px var(--primary);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary),
+      0 0 40px var(--primary);
+  }
+  100% {
+    box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
+      0 0 20px var(--primary);
+  }
+}
+
+.home .page .topik h2,
+.home .page .tujuan h2 {
+  padding: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-bottom: 10px;
+  display: inline-block; /* Membuat elemen menjadi inline block */
+  border-bottom: 2px solid var(--primary);
+  width: 50%;
+}
+
+#typing-container {
+  text-align: center;
+  font-size: 30px;
+  font-family: var(--fontPop);
+}
+
+.typing {
+  display: inline-block;
+  overflow: visible;
+  white-space: nowrap;
+  animation: typingAnimation 3s steps(40, end),
+    blinkCursor 0.5s step-end infinite alternate;
+}
+
+@keyframes typingAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  to {
+    visibility: hidden;
+  }
+}
+
+.home .page .topik p {
+  text-align: center;
+  border-top: solid 2px var(--primary);
+  width: 80%;
+  margin-top: 20px;
+  padding-top: 30px;
+  font-size: 28px;
+  font-family: var(--fontPop);
+  display: inline-block;
+}
+
+.home .page .topik p span {
+  color: #00ffff;
+}
+
+.home .page .tujuan p {
+  padding: 10px;
+  font-size: 23px;
+  text-align: left;
+  margin-bottom: 2px;
+  padding: 5px;
+  font-family: var(--fontPop);
+}
+
+.home .page .tujuan p span {
+  color: var(--primary);
+}
+
+/* hikayat */
+.hikayat {
+  padding: 100px 40px;
+  display: none;
+  height: 100%;
+}
+
+.hikayat.active {
+  display: block;
+}
+
+.hikayat .cont {
+  /* background-color: aqua; */
+  height: 400px;
+  box-shadow: 0 0 10px #000;
+  border-radius: 20px;
+}
+
+.hikayat .cont .side {
+  padding: 1.6rem 2rem;
+  font-size: 30px;
+  color: #fff;
+  font-family: var(--fontPop);
+  line-height: 65px;
+  align-items: center;
+  border-right: 2px solid var(--primary);
+  height: 100%;
+  margin-right: 20px;
+}
+
+.hikayat .cont .side button {
+  transition: 0.3s ease-in-out;
+  border-bottom: solid 2px #16141e;
+}
+
+.hikayat .cont .side button:hover {
+  color: var(--primary);
+  text-shadow: 0 0 5px var(--primary);
+}
+
+.hikayat .cont .side button:focus {
+  border-bottom: solid 2px var(--primary);
+}
+
+.hikayat .cont .side .nav-link.active {
+  border-bottom: solid 2px var(--primary);
+}
+
+.hikayat .cont .kolom {
+  color: #fff;
+  overflow: auto;
+  height: 100%;
+}
+
+.hikayat .cont .kolom li {
+  color: var(--primary);
+  border-top: solid;
+  padding: 10px;
+  font-size: 28px;
+  font-family: var(--fontPop);
+}
+
+.hikayat .cont .kolom .tih li {
+  color: #fff;
+  border-top: none;
+}
+
+.hikayat .cont .kolom p {
+  margin-top: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  font-family: var(--fontPop);
+}
+
+/* nilai */
+.nilai {
+  padding: 100px 40px;
+  visibility: hidden;
+}
+
+.nilai.active {
+  visibility: visible;
+}
+
+.nilai .title {
+  color: #fff;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 5rem;
+  font-family: var(--fontPop);
+}
+
+.nilai .title span {
+  color: var(--primary);
+}
+
+.nilai .story {
+  color: #000000;
+  font-family: var(--fontPop);
+  padding: 10px 50px;
+  box-shadow: 0 0 30px var(--primary);
+  border-radius: 20px;
+  background: #f3f3f3;
+  height: 100%;
+  transition: 0.3s;
+  padding-bottom: 30px;
+}
+
+.nilai .story.dark {
+  color: #fff;
+  background: #16141e;
+}
+
+.nilai .story h1 {
+  text-align: center;
+  font-size: 45px;
+  padding: 30px;
+  padding-bottom: 10px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.nilai .story h1::after {
+  content: ""; /* Menambahkan konten kosong untuk pseudo-element */
+  display: block;
+  width: 50%;
+  height: 2px;
+  background-color: var(--primary);
+  position: absolute;
+  bottom: 0;
+  left: 25%; /* Menyesuaikan letak border di tengah elemen h1 */
+}
+
+.active {
+  display: block;
+}
+
+.nilai .story .drk {
+  border: solid 2px #000;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 3px;
+  display: none;
+  transition: 0.3s ease-in-out;
+}
+
+.nilai .story .drk.active {
+  display: block;
+}
+
+.nilai .story .sun {
+  display: none;
+  border: solid 2px #fff;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  padding: 3px;
+  background-color: #16141e;
+  transition: 0.3s ease-in-out;
+}
+
+.nilai .story .sun img {
+  filter: invert(1);
+}
+
+.nilai .story .sun.active {
+  display: block;
+}
+
+.nilai .story .sun:hover {
+  background-color: #fff;
+}
+
+.nilai .story .sun:hover img {
+  filter: invert(0);
+}
+
+.nilai .story .drk:hover {
+  background-color: #000000;
+}
+
+.nilai .story .drk:hover img {
+  filter: invert(1);
+}
+
+.nilai .story .tes {
+  max-height: 400px; /* Sesuaikan dengan tinggi maksimum yang diinginkan */
+  overflow-y: auto;
+  border: solid 2px var(--primary);
+}
+
+.nilai .story .tes .paragraf {
+  padding: 10px 30px;
+  font-size: 16px;
+}
+
+.definisi {
+  margin-top: 80px;
+  font-family: var(--fontPop);
+}
+
+.definisi.active {
+}
+
+.definisi .a {
+  box-shadow: 0 0 20px 10px #000;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.definisi .a h2 {
+  color: #fff;
+  font-size: 35px;
+  margin-bottom: 20px;
+  border-bottom: solid 2px var(--primary);
+  width: 40%;
+  padding-bottom: 20px;
+}
+
+.definisi .a h2 span {
+  color: var(--primary);
+}
+
+.definisi .a h3 {
+  color: #fff;
+  font-size: 40px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+
+.definisi .a h3 span {
+  color: var(--primary);
+}
+
+.definisi .a ul {
+  color: #fff;
+  width: 80%;
+}
+
+.definisi .a ul li {
+  font-size: 25px;
+}
+
+.definisi .a p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.struktur {
+  margin-top: 80px;
+  font-family: var(--fontPop);
+}
+
+.struktur h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 50px;
+}
+
+.struktur h2 span {
+  color: var(--primary);
+}
+
+.struktur .konten .row {
+  border: #00ffff solid 3px;
+  box-shadow: 2px 2px 4px #00ffff;
+  animation: glowing 5s ease-in-out infinite;
+  margin: 50px;
+  color: #fff;
+  padding: 20px;
+}
+
+.struktur .konten .row .content button {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+.struk {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  padding: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out,
+    padding 0.3s ease-in-out;
+}
+
+.struk.active {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: solid 2px var(--primary);
+  max-height: 1000px; /* Sesuaikan dengan ketinggian maksimal yang mungkin */
+  opacity: 1;
+  padding-left: 10px; /* Sesuaikan dengan kebutuhan margin atas */
+}
+
+/* SESI PROFIL */
+.sesi__profil {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  height: 100%;
+  background-color: #0000;
+  color: var(--bg);
+  margin-bottom: 30px;
+  /* overflow-x: hidden; */
+}
+
+.sesi__profil.active {
+  display: flex;
+}
+
+#profil-title {
+  font-family: var(--fontPop);
+  color: #fff;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+  text-align: center;
+  padding-top: 10px;
+}
+
+#profil-title span {
+  color: var(--primary);
+}
+
+.card-wrapper {
+  mask: linear-gradient(90deg, transparent, white 2%, white 80%, transparent);
+
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 5%,
+    white 95%,
+    transparent
+  );
+
+  position: relative;
+  display: flex;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.card-wrapper .inner-scroller {
+  position: relative;
+  display: flex;
+  align-items: center;
+  animation: slideLeft 40s linear infinite;
+  width: fit-content;
+}
+
+.card-wrapper .inner-scroller:has(.cards:hover) {
+  animation-play-state: paused;
+}
+
+.card-wrapper .cards {
+  display: flex;
+  flex-direction: column;
+  min-width: 20rem;
+  height: 23rem;
+
+  padding: 1rem;
+  margin-right: 3rem;
+  background-color: var(--bg);
+  color: #fff;
+  transition: 250ms;
+}
+
+.card-wrapper .cards:hover {
+  box-shadow: 0 0 20px var(--secondary);
+}
+
+.card-wrapper .cards .img {
+  width: 100%;
+  height: 70%;
+  background-color: aqua;
+  margin-bottom: 1rem;
+}
+
+.card-wrapper .cards-title {
+  font-size: 1.5rem;
+  font-family: var(--fontMo);
+  font-weight: 700;
+}
+
+.card-wrapper .cards-title a {
+  /* text-decoration: none; */
+  color: inherit;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.card-wrapper .person-information {
+  margin: 0;
+  font-size: 1rem;
+  font-family: var(--fontPo);
+  font-weight: 600;
+  margin-left: 3px;
+}
+
+.card-wrapper .card-1 .img {
+  background-image: url(assets/img/gusan.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.card-wrapper .card-2 .img {
+  background-image: url(assets/img/dev.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.card-wrapper .card-3 .img {
+  background-image: url(assets/img/arya.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+.card-wrapper .card-4 .img {
+  background-image: url(assets/img/ayod.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.card-wrapper .card-5 .img {
+  background-image: url(assets/img/mulya.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.card-wrapper .card-6 .img {
+  background-image: url(assets/img/sanjay.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.cards {
+  border-radius: 20px;
+  box-shadow: 0 0 18px var(--primary);
+}
+
+@keyframes slideLeft {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* sumber */
+.sumber {
+  padding: 100px 40px;
+  padding-bottom: 20px;
+  font-family: var(--fontPop);
+}
+
+.sumber h2 {
+  text-align: center;
+  font-size: 40px;
+  color: #fff;
+}
+
+.sumber h2 span {
+  color: var(--primary);
+}
+
+.sumber .listsumber {
+  box-shadow: 0 0 20px #000000;
+  margin-top: 50px;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.sumber .listsumber li {
+  font-size: 25px;
+  color: #fff;
+  list-style: none;
+}
+
+.sumber .listsumber a {
+  font-size: 15px;
+  line-height: 50px;
+}
+
+footer {
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  margin-top: 50px;
+  bottom: 0;
+  width: 100%;
+  font-size: 15px;
+}
+
+@media (max-width: 450px) {
+  html {
+    scroll-padding-bottom: 1rem;
+  }
+
+  .page1 .hero {
+    padding: 50px;
+  }
+
+  .page1 .hero h2 {
+    font-size: 20px;
+  }
+
+  .page1 .hero h1 {
+    font-size: 30px;
+  }
+
+  .page1 .hero h4 {
+    font-size: 12px;
+  }
+
+  .page1 .hero h3 {
+    font-size: 15px;
+  }
+
+  .pageNav {
+    height: 40px;
+  }
+
+  .menu {
+    font-size: 20px;
+  }
+
+  .pageNav.active {
+    width: 25%;
+  }
+
+  .dropdown-content a {
+    padding: 6px 8px;
+    font-size: 10px;
+  }
+
+  .navi a {
+    font-size: 17px;
+  }
+
+  .dropdown-content {
+    margin-top: 5px;
+    min-width: 150px;
+  }
+
+  .home {
+    padding: 5vh 20px;
+    padding-bottom: 100px;
+  }
+
+  .home h1,
+  .hikayat h1 {
+    font-size: 2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .home .page .topik,
+  .home .page .tujuan {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 25px;
+    box-shadow: 2px 2px 4px var(--primary);
+    height: 100%;
+  }
+
+  @keyframes glowing {
+    0% {
+      box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
+        0 0 10px var(--primary);
+    }
+    50% {
+      box-shadow: 0 0 15px var(--primary), 0 0 20px var(--primary),
+        0 0 20px var(--primary);
+    }
+    100% {
+      box-shadow: 0 0 5px var(--primary), 0 0 10px var(--primary),
+        0 0 10px var(--primary);
+    }
+  }
+
+  .home .page .topik h2,
+  .home .page .tujuan h2 {
+    font-size: 1.8rem;
+  }
+
+  #typing-container {
+    font-size: 14px;
+  }
+
+  .home .page .topik p {
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 12px;
+  }
+
+  .home .page .tujuan p {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .hikayat {
+    padding: 4rem 23px;
+    padding-top: 1rem;
+    height: 100%;
+  }
+
+  .hikayat .cout {
+    height: auto;
+  }
+
+  .hikayat .cont .side {
+    padding: 1rem 0.8rem;
+    font-size: 15px;
+    line-height: 35px;
+  }
+
+  .hikayat .cont .kolom {
+    padding: 5px;
+  }
+
+  .hikayat .cont .kolom ul {
+    padding-left: 0px;
+    list-style: none;
+  }
+  .hikayat .cont .kolom li {
+    font-size: 15px;
+    padding-left: 1px;
+  }
+
+  .hikayat .cont .kolom p {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 390;
+    margin-top: 5px;
+  }
+
+  .nilai {
+    padding: 30px 20px;
+  }
+
+  .nilai .title {
+    margin-bottom: 3rem;
+  }
+
+  .nilai .title h1 {
+    font-size: 1.4rem;
+  }
+
+  .nilai .story {
+    padding: 25px 25px;
+  }
+
+  .nilai .story h1 {
+    font-size: 25px;
+    margin-bottom: 2px;
+    padding: 20px;
+  }
+
+  .nilai .story .drk,
+  .nilai .story .sun {
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  .nilai .story .drk img,
+  .nilai .story .sun img {
+    width: 22px;
+  }
+
+  .nilai .story .tes {
+    height: 600px;
+  }
+
+  .nilai .story .tes .paragraf {
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 480;
+  }
+
+  .definisi {
+    margin-top: 100px;
+  }
+
+  .definisi .a h2 {
+    font-size: 20px;
+    width: 70%;
+    padding-bottom: 10px;
+  }
+
+  .definisi .a h3 {
+    font-size: 18px;
+    width: 60%;
+  }
+
+  .definisi .a ul {
+    color: #fff;
+    width: 100%;
+  }
+
+  .definisi .a ul li {
+    font-size: 16px;
+  }
+
+  .definisi .a p {
+    font-size: 14px;
+  }
+
+  .struktur h2 {
+    font-size: 25px;
+  }
+
+  .struktur .konten .row {
+    margin: 45px 5px;
+    padding: 5px;
+    box-shadow: 2px 2px 23px #00ffff;
+    animation: none;
+  }
+
+  .struktur .konten .row .content button {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .struk {
+    font-size: 13px;
+    font-weight: 300;
+  }
+  .struk.active {
+    font-size: 13px;
+    font-weight: 300;
+  }
+
+  .sesi__profil {
+    padding: 1rem;
+  }
+
+  .card-wrapper .cards .img {
+    height: 60%;
+  }
+
+  #profil-title {
+    font-size: 1.8rem;
+  }
+
+  .card-wrapper .cards {
+    height: 20rem;
+    min-width: 13rem;
+  }
+
+  .card-wrapper .cards-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .card-wrapper .person-information {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .sumber {
+    padding: 50px 20px;
+    padding-bottom: 5px;
+  }
+
+  .sumber h2 {
+    font-size: 30px;
+  }
+
+  .sumber .listsumber {
+    margin-top: 40px;
+    padding: 20px;
+    margin-bottom: 40vh;
+  }
+
+  .sumber .listsumber li {
+    font-size: 18px;
+  }
+
+  .sumber .listsumber a {
+    font-size: 10px;
+    line-height: normal;
+  }
+  footer {
+    font-size: 10px;
+  }
+}
+
+/* responsive penjelasana */
